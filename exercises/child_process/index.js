@@ -8,7 +8,7 @@ server.on("request", (req, res) => {
   if (req.url === "/compute") {
     console.log("Entró a /compute y forkeo..");
     // write your code here
-    const compute = fork("compute.js");
+    const compute = fork("./compute.js");
     compute.send("start");
     compute.on("message", sum => {
       res.end(`Sum is ${sum}`);
