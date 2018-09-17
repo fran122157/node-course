@@ -22,4 +22,5 @@ setTimeout(() => {
   setTimeout(() => {
     myEmitter.emit("finDelPartido");
   }, 5000);
+  
 }, 5000);

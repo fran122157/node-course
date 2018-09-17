@@ -2,9 +2,11 @@
 
 const cluster = require("cluster"),
   http = require("http"),
-  numCPUs = require("os").cpus().length;
+  cpus = require("os").cpus(),
+  numCPUs = cpus.length;
 
 if (cluster.isMaster) {
+  console.log("Una sola vez");
   console.log(`Master proccess is running with PID #${process.pid}`);
 
   // Fork workers, one for each CPU

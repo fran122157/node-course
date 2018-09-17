@@ -6,6 +6,7 @@ function longComputation() {
   return sum;
 }
 
-process.on("message", () => {
-  // write your code here
+process.on("Start", () => {
+  const sum = longComputation();
+  process.send(sum);
 });
