@@ -16,7 +16,6 @@ function compose(initVal, funcList) {
 const compose1 = compose("Diego", [addHello, addExclamation]);
 console.log(compose1);
 
-
 function craftNiceSalute(name) {
   return compose(name, [addHello, addExclamation, addQuestion]);
 }

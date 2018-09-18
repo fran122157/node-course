@@ -38,6 +38,8 @@ doSomething(
   {prop1: "valueForProp1", prop2: "valueForProp2", prop3: "valueForProp3"}
 );
 
+debugger
+
 function doSomethingWithDefaults({prop1 = "prop1Val", prop3 = "prop3Val"} = {}) {
   console.log("doSomethingWithDefaults() {prop1, prop3}   =>   ", `prop1: ${prop1}`, `prop3: ${prop3}`);
 }
