@@ -13,7 +13,12 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.render("index",
+    {
+      title: "Hello Wolrd",
+      message: "Esto es un mensaje"
+    }
+  );
 });
 
 app.listen(8000, () => {
